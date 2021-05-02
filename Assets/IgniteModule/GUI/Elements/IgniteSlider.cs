@@ -97,7 +97,7 @@ namespace IgniteModule
         }
 
         // label, monitoring slider
-        public static IIgniteGUIGroup AddMonitoringSlider(this IIgniteGUIGroup group, string label, Func<float> monitor, float minValue = 0f, float maxValue = 1f)
+        public static IIgniteGUIGroup AddMonitoringSlider(this IIgniteGUIGroup group, string label, Func<float> monitor, float minValue, float maxValue)
         {
             var valueChangeEvent = new IgniteSlider.ValueChangeEvent();
             var slider = IgniteSlider.Create(v => { }, minValue, maxValue, valueChangeEvent: valueChangeEvent);
